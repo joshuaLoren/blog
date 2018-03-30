@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- set viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap 4 CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- custom style sheet -->
+  <link rel="stylesheet" href="styles/css.css">
+
+</head>
+
+<body>
+    <div class="container"> <!-- open the container -->
+      <div class="jumbotron">
+        <h1>Objects</h1>
+        <p>
+          When you are creating objects in Java, you are creating an instance of a class. Classes can
+          extend classes by way of inheritance. In JavaScript objects do not need to be an instance of
+          a class.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card text-center">
+            <div class="card-block">
+              <p class="card-text">
+              We will start start by creating an object in Java. We create objects by creating instances of classes.
+              The Scanner class is build into the Java API and will need to be imported using java.util.Scanner;.
+              <br><br>
+              <img src="images\objectExampleCode.PNG" alt="object example">
+              <p> and the desired output: </p><br><br>
+              <img src="images\objecExampleConsoleOutput.PNG" alt="console output">
+              <p> Lets take a look at the code: </p><br>
+              <p><strong>import java.util.Scanner;</strong><br>
+              Here we are importing the class Scanner, by doing so,
+              we have access to all of Scanner's methods. We will take
+              a closer look at classes later. </p><br>
+              <p>Take a close look at line 16: <strong>Scanner keyboard = new Scanner(System.in);</strong><br>
+              Scanner is the class, and we are creating a new instance of this class. The reference variable,
+              "keyboard", is what we will name the instance. By creating an instance of the Scanner class, we
+              have created a Scanner object that will have access to all of Scanner's methods (functions).</p>
+              <p>This is demonstrated in line 22: <strong>name = keyboard.nextline()</strong><br>
+              Our Scanner object (keyboard), has access to the Scanner class, and uses the method nextLine().
+              If we were to take a look at the Scanner class we would see a method called nextLine(), that reads
+              the next String input by the user.
+              <br><p>Now, lets have a look at creating an object in JavaScript.</p><br>
+              <img src="images\jsObjectCode.PNG" alt="object example">
+              <p> and the desired output: </p><br><br>
+              <img src="images\jsObjectOutput.PNG" alt="console output">
+              <p> Lets take a look at the code: </p><br>
+              <p><strong>var computer = {ram : "16 GB", hardDrive : 1 TB 5400 rpm, graphicsCard: "GeForce GTX 1050"}</strong><br>
+              In JavaScript we have name:value pairs called properties. A JavaScript object is essentially
+              a container for naming properties. One way to access an object property is to use the objectsName.propName.
+              This is just a basic example, but the point of this tutorial is to demonstrate how in a class based language
+              like Java objects inherit methods from classes, while in a nonclass language like JavaScript objects inherit methods
+              (functions) from objects. More to come on this later. </p>
+
+
+
+
+
+              <br><br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </row>
+
+      <footer class="footer">
+        <p>Joshua Small 2018</p>
+      </footer>
+
+    </div> <!-- close the container -->
+</body>
+</html>

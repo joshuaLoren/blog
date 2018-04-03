@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- set viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap 4 CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- custom style sheet -->
+  <link rel="stylesheet" href="styles/css.css">
+
+</head>
+
+<body>
+    <div class="container"> <!-- open the container -->
+      <div class="jumbotron">
+        <h1><center>Recursion</center></h1>
+        <p>
+            Recursion occurs when you call a method within itself. Lets look problem often used to explain the basics
+            of recursion: the factorial problem.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card text-center">
+            <div class="card-block">
+              <div class="card-text" align="left" >
+                  <pre><code>
+                        import java.io.*;
+                        import java.util.*;
+                        
+                        public class Solution {
+                        
+                            public static void main(String[] args) {
+                                System.out.println(GCD(1000000,999994));
+                            }
+                            
+                            /**
+                             *@param x and y - two integers
+                             *@return - GCD
+                             */
+                            public static int GCD(int x, int y){
+                                
+                                int temp;
+                                //place in correct order, x needs to be greater than y
+                                if(y > x)
+                                {
+                                    temp = y;
+                                    y = x;
+                                    x = temp;
+                                    System.out.println(x);
+                                    System.out.println(y);
+                                }
+                                //base case
+                                if(y == 0)
+                                {
+                                    return x;
+                                }
+                                else 
+                                {
+                                    return GCD(y, (x % y));
+                                }
+                            }
+                            
+                        }
+                  </code></pre>
+                  <div align="left">
+                      <bold>Now a look at the same approach in JavaScript</bold>
+                      <pre><code>
+                            function GCD(x, y)
+                            {
+                                var temp;
+                                //If x is less than y, reassign values
+                                if(x < y) {
+                                    temp = y;
+                                    y = x;
+                                    x = temp;
+                                }
+                                // base case
+                                if(y == 0)
+                                {
+                                    return x;
+                                }
+                                else
+                                {
+                                    return GCD(y, (x % y));
+                                }
+                            }
+                            var result = GCD(10, 100);
+                            document.write(result);
+                          
+                      </code></pre>
+                  </div>
+                </div>
+
+
+
+
+
+              <br><br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </row>
+
+      <footer class="footer">
+        <p>Joshua Small 2018</p>
+      </footer>
+
+    </div> <!-- close the container -->
+</body>
+</html>
